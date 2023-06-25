@@ -45,7 +45,7 @@ function Home() {
           />
           <Product
             id="127"
-            title="The edgelord Mangekiu Sharingan Post Itachi Fight- Sasuke"
+            title="Sasuke"
             price={19.99}
             image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.x20lZET71eEP3EZA0D1FGgHaNa%26pid%3DApi&f=1&ipt=c45a43f985c528a60304f14486684ee03fd46b726628418a97473802702b4934&ipo=images"
             rating={4}
@@ -56,10 +56,10 @@ function Home() {
         <div className="home__row">
           <Product
             id="32949249"
-            title="Samsung S19F350HNW 18.5-inch AH IPS LED Monitor (Black) (Not A TV)"
-            price={5500}
+            title="Daredevil Lego Figure"
+            price={14.99}
             rating={4}
-            image="https://m.media-amazon.com/images/I/81JNAFOB3lL._AC_UY218_.jpg"
+            image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.-a6FP_AKfmd72Aoc7nL5CQHaHa%26pid%3DApi&f=1&ipt=0ede96af2f67e8f5832cc0fc268e24083a48183cfc5bba2f071785ba12c8996c&ipo=images"
           />
         </div>
       </div>
