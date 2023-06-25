@@ -8,7 +8,7 @@ function Home() {
       <div className="home__container">
         <img
           className="home__image"
-          src={process.env.PUBLIC_URL + "/itemSwapAdjusted.jpg"}
+          src={process.env.PUBLIC_URL + "/Swap_Banner.png"}
           alt=""
         />
 
