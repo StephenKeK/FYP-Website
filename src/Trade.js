@@ -185,7 +185,7 @@ function Trade() {
               </tr>
               <tr>
                 <td>
-                  <small>$</small>
+                  <small>RM</small>
                   <strong>{trade[0]?.price}</strong>
                 </td>
               </tr>
