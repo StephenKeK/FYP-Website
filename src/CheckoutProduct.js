@@ -9,7 +9,7 @@ function CheckoutProduct({ id, title, image, price, rating, hideButton }) {
     const removeFromBasket = () => {
         //remove item from the basket
         dispatch({
-            type: 'REMOVE_FROM_BASKET',
+            type: 'REMOVE_FROM_CART',
             id: id,
         });
     };

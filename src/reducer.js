@@ -1,6 +1,8 @@
 export const initialState = {
   basket: [],
   user: null,
+  trade: [],
+  traded_data: [],
 };
 
 //Selector : used in the production environment
@@ -14,6 +16,43 @@ const reducer = (state, action) => {
       return {
         ...state,
         user: action.user,
+      };
+
+    case "TRADE":
+      return {
+        ...state,
+        trade: [...state.trade, action.item],
+      };
+
+    case "EMPTY_TRADE":
+      return {
+        ...state,
+        trade: [],
+      };
+
+    case "TRADED_DATA":
+      return {
+        ...state,
+        traded_data: [...state.traded_data, action.item],
+      };
+
+    case "TRADED_DATA_RATING":
+      let newRating = [...state.traded_data];
+      for (let i = 0; i < state.traded_data.length; i++) {
+        if (i === action.id) {
+          newRating[i].rating = action.item;
+        }
+      }
+      console.log("reducer", newRating);
+      return {
+        ...state,
+        traded_data: newRating,
+      };
+
+      case "PAYMENT":
+      return {
+        ...state,
+        trade: [...state.trade, action.item],
       };
 
     case "ADD_TO_CART":

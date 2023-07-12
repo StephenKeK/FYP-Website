@@ -3,14 +3,33 @@ import "./Product.css";
 import StarIcon from "@material-ui/icons/Star";
 import { useStateValue } from "./StateProvider";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-function Product({ id, title, price, rating, image }) {
-  const [{ basket }, dispatch] = useStateValue();
+function Product({ id, title, price, rating, image, isHideButton }) {
+  const [{ basket, trade }, dispatch] = useStateValue();
 
   const addToBasket = () => {
     //Dispacth the item into the data layer so that it can be used by any pages.
     dispatch({
       type: "ADD_TO_CART",
+      item: {
+        id: id,
+        title: title,
+        image: image,
+        price: price,
+        rating: rating,
+      },
+    });
+    toast.success("Success add to cart !", {
+      position: toast.POSITION.TOP_CENTER,
+    });
+  };
+
+  const onTrade = () => {
+    dispatch({ type: "EMPTY_TRADE" });
+    dispatch({
+      type: "TRADE",
       item: {
         id: id,
         title: title,
@@ -38,10 +57,15 @@ function Product({ id, title, price, rating, image }) {
         </div>
       </div>
       <img className="product__image" src={image} alt="Product Image" />
-      <button onClick={addToBasket}>Add to Cart</button>
-      <Link to="/Trade">
-        <button>Trade</button>
-      </Link>
+      {!isHideButton && (
+        <>
+          <button onClick={addToBasket}>Add to Cart</button>
+          <ToastContainer style={{ top: "60px" }} />
+          <Link to="/Trade">
+            <button onClick={() => onTrade()}>Trade</button>
+          </Link>
+        </>
+      )}
     </div>
   );
 }

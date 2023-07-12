@@ -1,3 +1,23 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  border: 0px solid #dddddd;
+  padding: 10px;
+  text-align: center;
+}
+
+td {
+  border: 0px solid #dddddd;
+  text-align: center;
+  padding: 10px;
+}
+.iconSwap{
+   width: 50% !important;
+}
 .trade {
   display: flex;
   flex-direction: column;
