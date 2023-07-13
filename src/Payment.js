@@ -23,14 +23,9 @@ function Payment() {
   const [clientSecret, setClientSecret] = useState(true);
 
   useEffect(() => {
-    // generate the special stripe secret which allows us to charge a customer
+    
     const getClientSecret = async () => {
-      // const response = await axios({
-      //     method: 'post',
-      //     // Stripe expects the total in a currencies subunits
-      //     url: `/payments/create?total=${getBasketTotal(basket) * 100}`
-      // });
-
+  
       await axios
         .post(`/payments/create?total=${getBasketTotal(basket) * 100}`)
         .then(function (response) {
@@ -74,20 +69,7 @@ function Payment() {
             created: paymentIntent.created,
           });
 
-        //   dispatch({
-        //     type: "PAYMENT",
-        //     item: {
-        //       from: { ...trade[0] },
-        //       mines: {
-        //         title: title,
-        //         description: description,
-        //         quantity: quantity,
-        //         files: files,
-        //       },
-        //       rating: null,
-        //     },
-        //   });
-
+        
         setSucceeded(true);
         setError(null);
         setProcessing(false);
@@ -121,8 +103,8 @@ function Payment() {
           </div>
           <div className="payment__address">
             <p>{user?.email}</p>
-            <p>123 React Lane</p>
-            <p>Los Angeles, CA</p>
+            <p>SS 15</p>
+            <p>SubangJaya, Selangor</p>
           </div>
         </div>
 

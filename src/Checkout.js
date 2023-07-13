@@ -18,10 +18,10 @@ function Checkout() {
         {basket?.length === 0 ? (
           <div>
             <h3> Hello, {user?.email}</h3>
-            <h2>Your  cart is empty</h2>
+            <h2>Your cart is empty</h2>
             <p>
               You have no item in your cart. To buy one or more items, click
-              "Add to Cart" next to items
+              "Add to Cart"
             </p>
           </div>
         ) : (

@@ -131,7 +131,7 @@ const TradeList = () => {
                         <Paper className={classes.paper}>
                           <h3>{row.from.title}</h3>
                           <p>
-                            <small>$</small>
+                            <small>RM</small>
                             <strong>{row.from.price}</strong>
                           </p>
 
